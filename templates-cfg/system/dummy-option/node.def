@@ -1,0 +1,6 @@
+type: txt
+help: Dummy example option
+val_help: txt; Any string
+create: echo "Dummy option created: $VAR(@)"
+update: echo "Dummy option updated: $VAR(@)"
+delete: echo "Dummy option deleted"

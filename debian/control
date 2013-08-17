@@ -1,0 +1,16 @@
+Source: vyatta-dummy
+Section: contrib/net
+Priority: extra
+Maintainer: SO3 Group <maintainers@so3group.net>
+Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 5), autotools-dev, autoconf
+
+Package: vyatta-dummy
+Architecture: all
+Depends: vyatta-cfg-system,
+ vyatta-cfg,
+ vyatta-op,
+ ${misc:Depends}
+Replaces: vyatta-dummy
+Description: Vyatta package skeleton
+ Vyatta package skeleton
