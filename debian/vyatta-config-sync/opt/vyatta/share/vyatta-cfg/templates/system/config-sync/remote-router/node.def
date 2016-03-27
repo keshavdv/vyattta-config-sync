@@ -1,0 +1,14 @@
+tag:
+type: txt
+help: Specifies the address of the standby system.
+val_help: ipv4; IPv4 address of the peer
+val_help: ipv6; IPv6 address of the peer
+val_help: txt; Hostname of the peer
+
+commit:expression: exec "/bin/cli-shell-api exists system config-sync remote-router $VAR(@) username &&
+						 /bin/cli-shell-api exists system config-sync remote-router $VAR(@) sync-map" ; 
+						 "Configuration error: a username and sync-map must be defined for a remote-router"
+
+
+commit:expression: exec "/bin/cli-shell-api exists system config-sync remote-router $VAR(@) sync-map $VAR(./sync-map/@)" ;
+						"Configuration error: sync-map \"$VAR(./sync-map/@)\" does not exist"

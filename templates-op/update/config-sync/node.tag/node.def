@@ -1,0 +1,3 @@
+help: Synchronize configuration on specified remote system
+allowed: eval "NODES=($(cli-shell-api listEffectiveNodes system config-sync remote-router))"; echo $NODES
+run: $vyatta_sbindir/vyatta-config-sync-update.sh $3

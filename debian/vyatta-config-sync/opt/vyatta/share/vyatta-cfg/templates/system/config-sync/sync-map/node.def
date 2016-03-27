@@ -1,0 +1,6 @@
+tag:
+type: txt
+help: The name of a synchronization map.
+val_help: ipv4; IPv4 address of the peer
+val_help: ipv6; IPv6 address of the peer
+val_help: txt; Hostname of the peer

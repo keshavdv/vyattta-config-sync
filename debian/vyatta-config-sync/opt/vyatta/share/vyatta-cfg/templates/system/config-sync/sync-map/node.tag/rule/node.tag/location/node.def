@@ -1,0 +1,7 @@
+type: txt
+help: The path to the configuration node. If the configuration node contains more than
+one character string, the strings should be separated by spaces and the entire
+string should be enclosed in double quotation marks (for example, "system
+login user foobar")
+
+commit:expression: exec "/bin/cli-shell-api exists $VAR(@)" ; "Configuration error: \"$VAR(@)\" does not exist in the router configuration"

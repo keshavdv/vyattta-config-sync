@@ -1,0 +1,2 @@
+help: Synchronize configuration on all remote systems
+run: $vyatta_sbindir/vyatta-config-sync-update-all.sh

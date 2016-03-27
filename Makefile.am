@@ -6,7 +6,9 @@ bin_sudo_usersdir = $(bindir)/sudo-users
 vprefix = /opt/vyatta
 vsbindir = $(vprefix)/sbin
 
-sbin_SCRIPTS =
+sbin_SCRIPTS  = scripts/vyatta-config-sync-status.sh
+sbin_SCRIPTS += scripts/vyatta-config-sync-update.sh 
+sbin_SCRIPTS += scripts/vyatta-config-sync-update-all.sh 
 
 bin_sudo_users_SCRIPTS =
 

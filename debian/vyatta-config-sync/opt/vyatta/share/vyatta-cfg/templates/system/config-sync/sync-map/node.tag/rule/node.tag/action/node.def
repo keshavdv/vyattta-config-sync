@@ -1,0 +1,7 @@
+type: txt
+help: Specifies the action to be taken
+syntax:expression: $VAR(@) in "include", "exclude" ; "\"$VAR(@)\" is not a valid action"
+allowed: echo include exclude
+
+val_help: include; Include the configuration node specified by the location parameter in the configuration synchronization.
+val_help: exclude; Exclude the configuration node specified by the location parameter from the configuration synchronization.

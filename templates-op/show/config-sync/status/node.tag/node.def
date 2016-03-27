@@ -1,0 +1,2 @@
+help: Status of config-sync for remote router
+run: $vyatta_sbindir/vyatta-config-sync-status.sh $4

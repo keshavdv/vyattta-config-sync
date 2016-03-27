@@ -1,0 +1,4 @@
+help: The name of a synchronization map.
+type: txt
+commit:expression: exec "/bin/cli-shell-api exists system config-sync sync-map $VAR(@)" ; 
+						"Configuration error: The sync-map \"$VAR(@)\" does not exist"

@@ -1,0 +1,7 @@
+tag:
+type: u32
+help: Specifies a synchronization map rule.
+val_help: u32:1-1024 ; Rule number
+
+commit:expression: $VAR(./location) != ""; "Configuration error: each rule must specify a location"
+commit:expression: $VAR(./action) != ""; "Configuration error: each rule must specify an action"

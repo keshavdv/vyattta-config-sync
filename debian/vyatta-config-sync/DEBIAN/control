@@ -1,0 +1,10 @@
+Package: vyatta-config-sync
+Version: 0.0.1
+Architecture: all
+Maintainer: Keshav Varma <keshavdv@gmail.com>
+Installed-Size: 21
+Depends: vyatta-cfg-system, vyatta-cfg, vyatta-op
+Replaces: vyatta-config-sync
+Section: contrib/net
+Priority: extra
+Description: Vyatta config-sync tools and utilites

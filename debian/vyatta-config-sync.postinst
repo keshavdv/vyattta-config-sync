@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+mkdir -p /var/lib/vyatta-config-sync
+chmod 777 /var/lib/vyatta-config-sync
+
+# create symlink for post commit hook
+ln -sf /opt/vyatta/sbin/vyatta-config-sync-update-all.sh /etc/commit/post-hooks.d/100vyatta-config-sync.sh

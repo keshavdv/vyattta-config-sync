@@ -14,7 +14,7 @@
 # from having to guess our platform (since we know it already)
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
-PACKAGE=vyatta-dummy
+PACKAGE=vyatta-config-sync
 PKGDIR=$(CURDIR)/debian/$(PACKAGE)
 
 CFLAGS = -Wall -g
