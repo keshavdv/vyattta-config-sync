@@ -4,7 +4,10 @@ This replicates the functionality of the commercial version of Vyatta's config-s
 
 #### Installation
 
-Installation
+To install the prepackaged version, run the following:
+
+    $ wget https://github.com/keshavdv/vyattta-config-sync/releases/download/v0.0.1/vyatta-config-sync_0.0.1_all.deb
+    $ sudo dpkg -i vyatta-config-sync_0.0.1_all.deb
 
 To compile a debian package yourself, run the following:
 
