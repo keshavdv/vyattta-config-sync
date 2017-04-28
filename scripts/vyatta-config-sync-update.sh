@@ -69,7 +69,16 @@ function generate_commands()
 {
   local LOCATION=${1}
   if is_included "$LOCATION"; then
-    NODE_TYPE=$(cli-shell-api getNodeType $LOCATION)
+    
+    # Workaround: getNodeType don't return leaf when a command can end before this (i.e.: set protocols static route x.x.x.x/x next-hop y.y.y.y <distance z> - distance isn't required)
+    NODES_LIST_LEAF=$(cli-shell-api listEffectiveNodes $LOCATION)
+    eval "NODES_LEAF=($NODES_LIST_LEAF)"
+    if [ ${#NODES_LEAF[@]} == 0 ]; then
+        NODE_TYPE="leaf"
+    else
+        NODE_TYPE=$(cli-shell-api getNodeType $LOCATION)
+    fi
+    
     if [ "$NODE_TYPE" != "leaf" ]; then
 
       # Check if node is multi
