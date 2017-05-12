@@ -141,7 +141,7 @@ for i in "${SORTED_RULES[@]}";
     done
 
 CHANGESET=`join ";" "${commands[@]}"`
-CHANGESET="$CHANGESET;commit;"
+CHANGESET="$CHANGESET;commit;exit;"
 
 echo -e "\t changeset: ##############"
 for i in "${commands[@]}"
