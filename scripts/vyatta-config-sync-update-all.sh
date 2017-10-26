@@ -8,3 +8,4 @@ for i in "${NODES[@]}"
   do    
     $vyatta_sbindir/vyatta-config-sync-update.sh $i
   done     
+exit 0
